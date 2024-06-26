@@ -1,40 +1,24 @@
-from initialise import *
-from sys import exit 
+import pygame, sys
 
-from game import Game
-from score import Score
-from preview import Preview
+pygame.init() # Initialize Pygame
+dark_blue = (44, 44, 127) # Define a color using RGB values
 
-class Main:
-    def __init__(self):
-        pygame.init() 
-        self.display = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-        self.clock = pygame.time.Clock()
-        pygame.display.set_caption('Tetris')
 
-        self.game = Game()
-        self.score = Score()
-        self.preview = Preview()
-    
-    def run(self):
-        while True:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
-                    exit()
+display = pygame.display.set_mode((300, 600)) # 300x600 pixels is the size of the game window
+pygame.display.set_caption('Tetris') # Title of the game window
 
-            # display 
-            self.display.fill(GRAY)
+clock = pygame.time.Clock() # Create a clock object to control the frame rate
 
-            self.game.run()
-            self.score.run()
-            self.preview.run()
+# Main game loop
+while True:
+    # Check for events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: # If the user clicks the close button
+            pygame.quit() # Quit Pygame
+            sys.exit() # Exit the program
 
-            # update display  
-            pygame.display.update()
-            self.clock.tick(60)
+    # For drawing onto the screen
+    display.fill(dark_blue) # Fill the screen with the color dark_blue
+    pygame.display.update() # Update the display
+    clock.tick(60) # Limit the frame rate to 60 frames per second
             
-
-if __name__ == '__main__':
-    main = Main()
-    main.run()
