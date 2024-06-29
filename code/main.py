@@ -15,7 +15,7 @@ score_rect = pygame.Rect(320, 55, 170, 60) #Positions (top left) and dimensions 
 next_rect = pygame.Rect(320, 215, 170, 180) #Positions (top left) and dimensions of next block rectangle
 
 screen = pygame.display.set_mode((500, 620)) #Set the display size
-pygame.display.set_caption("Python Tetris") #Set the title of the window
+pygame.display.set_caption("Tetris") #Set the title of the window
 
 clock = pygame.time.Clock() #Create a clock object
 

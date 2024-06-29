@@ -4,18 +4,18 @@ class Colours:
   
   #Colours for tetrominoes
 	dark_grey = (26, 31, 40)
-	green = (47, 230, 23)
-	red = (232, 18, 18)
-	orange = (226, 116, 17)
-	yellow = (237, 234, 4)
-	purple = (166, 0, 247)
-	cyan = (21, 204, 209)
-	blue = (13, 64, 216)
+	green = (0, 255, 0)
+	red = (255, 0, 0)
+	orange = (255, 165, 0)
+	yellow = (255, 255, 0)
+	purple = (128, 0, 128)
+	cyan = (0, 255, 255)
+	blue = (0, 0, 255)
  
   #UI colours
 	white = (255, 255, 255)
-	dark_blue = (44, 44, 127)
-	light_blue = (59, 85, 162)
+	dark_blue = (0, 0, 0)
+	light_blue = (50, 50, 50)
 
   #Returns a list of all the colours for the tetrominoes
 	@classmethod
